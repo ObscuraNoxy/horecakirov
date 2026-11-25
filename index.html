@@ -184,18 +184,16 @@
   .flag.down { color: var(--down); }
   td.has-trend { cursor: help; }
 
-  footer {
-    margin-top: 30px; padding-top: 16px; border-top: 1px solid var(--line);
-    color: var(--muted); font-size: 12px;
-  }
-  footer p { margin: 0 0 5px; }
   /* Источники — компактным списком, а не слипшимся абзацем. */
+  /* Источники стоят сразу под датой сборки: видно, откуда цифры и когда
+     сняты прайсы. Тонкая строка, чтобы не спорить с таблицей. */
   ul.sources {
-    margin: 0; padding: 0; list-style: none;
-    display: flex; flex-wrap: wrap; gap: 4px 18px;
+    margin: 10px 0 0; padding: 0; list-style: none;
+    display: flex; flex-wrap: wrap; gap: 3px 16px;
+    font-size: 11px; line-height: 1.45; color: var(--sub);
   }
   ul.sources li { white-space: nowrap; }
-  ul.sources b { color: var(--ink); font-weight: 600; }
+  ul.sources b { color: var(--muted); font-weight: 600; }
   .caption {
     padding: 10px 16px 12px; font-size: 12px; color: var(--muted);
     border-top: 1px solid var(--line-soft);
@@ -350,6 +348,7 @@
   .printing .tick { font-size: 7px !important; }
   .printing .dash { color: #999 !important; }
   .printing footer { display: none !important; }
+  .printing ul.sources { display: none !important; }
   .printing .wrap { max-width: none !important; margin: 0 !important; }
 
   /* Запасной путь: печать самой страницы (Ctrl+P) без скриптов. */
@@ -390,6 +389,15 @@
     Собрано <b>25.11.2026 10:34</b><span class="dot">·</span>цены в <b>руб/кг</b>
     <span class="dot">·</span>позиций <b>44</b> из 46
   </p>
+
+  <ul class="sources">
+    <li><b>Маишев</b> — маишев.xlsx, изменён 19.11.2026 08:31</li>
+      <li><b>Гарай</b> — гарай.docx, изменён 25.11.2026 09:12</li>
+      <li><b>Фреш</b> — фреш.xlsx, изменён 23.11.2026 09:12</li>
+      <li><b>Колчанов</b> — колчанов.xls, изменён 24.11.2026 10:47</li>
+      <li><b>Байкал</b> — байкал.xlsx, изменён 25.11.2026 09:37</li>
+      <li><b>swlife.ru</b> — публичные розничные цены, снято с сайта; ориентир по рынку, не закупочное предложение</li>
+  </ul>
 
   <div class="chips">
     <span class="chip lead"><span class="name">Фреш</span><span class="count">18</span></span><span class="chip"><span class="name">Байкал</span><span class="count">12</span></span><span class="chip"><span class="name">Маишев</span><span class="count">11</span></span><span class="chip"><span class="name">Гарай</span><span class="count">2</span></span><span class="chip"><span class="name">Колчанов</span><span class="count">1</span></span><span class="chip"><span class="name">swlife.ru</span><span class="count">1</span></span>
@@ -1668,16 +1676,6 @@
       </div>
     </div>
 
-  <footer>
-    <ul class="sources">
-      <li><b>Маишев</b> — маишев.xlsx, изменён 19.11.2026 08:31</li>
-      <li><b>Гарай</b> — гарай.docx, изменён 25.11.2026 09:12</li>
-      <li><b>Фреш</b> — фреш.xlsx, изменён 23.11.2026 09:12</li>
-      <li><b>Колчанов</b> — колчанов.xls, изменён 24.11.2026 10:47</li>
-      <li><b>Байкал</b> — байкал.xlsx, изменён 25.11.2026 09:37</li>
-      <li><b>swlife.ru</b> — публичные розничные цены, снято с сайта; ориентир по рынку, не закупочное предложение</li>
-    </ul>
-  </footer>
 
 </div>
 <script>
